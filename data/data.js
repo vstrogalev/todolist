@@ -1,14 +1,18 @@
 export const dataTodos = [
   {
-    task: 'Learn HTML'
+    task: 'Learn HTML',
+    edit: false
   },
   {
-    task: 'Learn CSS'
+    task: 'Learn CSS',
+    edit: false
   },
   {
-    task: 'Learn JS'
+    task: 'Learn JS',
+    edit: true
   },
   {
-    task: 'Learn React'
+    task: 'Learn React',
+    edit: false
   }
 ];

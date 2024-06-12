@@ -1,10 +1,10 @@
 import { deleteTodo } from '../../../data/data.js'
 
-export function DeleteTodo(idx) {
+export function DeleteTodo(id) {
   const deleteButton = document.createElement('button');
   deleteButton.textContent = '❌';
   deleteButton.addEventListener('click', () => {
-    deleteTodo(idx);
+    deleteTodo(id);
   })
   
   return deleteButton;

@@ -5,8 +5,8 @@ export function Todos() {
   const todos = document.createElement('ol');
   const dataTodos = getDataTodos();
 
-  dataTodos.forEach((todo, idx) => {
-    todos.appendChild(Todo(todo, idx));
+  dataTodos.forEach((todo) => {
+    todos.appendChild(Todo(todo));
   })
   
   return todos;

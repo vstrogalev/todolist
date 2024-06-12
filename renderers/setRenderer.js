@@ -1,4 +1,4 @@
-let renderAfterChange = () => {};
+export let renderAfterChange = () => {};
 
 export function setRenderer(cb) {
   renderAfterChange = cb;

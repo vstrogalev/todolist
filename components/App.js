@@ -1,6 +1,5 @@
-import { Title } from './Title/Title.js'
+import { Title } from './Title/Title.js';
 import { TodosContainer } from './TodosContainer/TodosContainer.js';
-import { Todos } from './Todos/Todos.js';
 
 export function App() {
   const app = document.createElement('div');
@@ -9,9 +8,7 @@ export function App() {
   app.append(
     hr, 
     Title(), 
-    TodosContainer(
-      Todos()
-    )
+    TodosContainer()
   );
   return app;
 }

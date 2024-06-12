@@ -20,4 +20,8 @@ export const dataTodos = [
 // функция, в которую передаем команду и данные, типа диспетчер
 // событие - добавить таску, есть данные новой таски
 // событие - удалить таску, есть данные ИД удаляемой таски
+export function deleteTodo(idxToDelete) {
+  dataTodos.filter((el, index) => index !== idxToDelete);
+  
+}
 // событие - редактировать таску

@@ -1,7 +1,5 @@
-import { App } from './components/App.js'
+import { TodoList } from './components/TodoList.js'
 
 const root = document.getElementById('root');
 
-const app = App();
-
-root.appendChild(app)
+const app = TodoList(root);

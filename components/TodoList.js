@@ -1,7 +1,8 @@
 import { Title } from './Title/Title.js';
 import { TodosContainer } from './TodosContainer/TodosContainer.js';
 
-export function TodoList(root) {
+export function TodoList(rootId) {
+  const rootElement = document.getElementById(rootId);
   const todos = document.querySelector('#todosContainer');
   
   if (todos) { // to update if already exists
@@ -18,5 +19,5 @@ export function TodoList(root) {
     Title(), 
     TodosContainer()
   );
-  root.appendChild(todoList);
+  rootElement.appendChild(todoList);
 }

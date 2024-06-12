@@ -1,22 +1,20 @@
 import { DialogNewTaskInput } from "./DialogNewTaskInput/DialogNewTaskInput.js";
 import { DialogNewTaskTitle } from "./DialogNewTaskTitle/DialogNewTaskTitle.js";
-import { dataTodos } from '../../data/data.js'
+import { dataTodos, addTodo } from '../../data/data.js'
 
 export function DialogNewTask() {
   function handleChangeInput(e) {
     const value = e.target.value.trim()
     console.log(value);
     if (value !== '') { // вынести в data
-      dataTodos.push({
-        task: value,
-        edit: false
-      })
+      addTodo(value);
       dialogNewTask.open = false;
       console.log(dataTodos)
     }
   }
 
   const dialogNewTask = document.createElement('dialog');
+  dialogNewTask.id = 'dialogNewTask';
   dialogNewTask.append(DialogNewTaskTitle());
   dialogNewTask.append(DialogNewTaskInput(handleChangeInput));
 
@@ -30,8 +28,6 @@ export function DialogNewTask() {
     transform: translate(-50%, -50%);
     /* Смещение диалога на 50% его ширины и высоты для центрирования */
   `
-
-  dialogNewTask.open = true;
   
   return dialogNewTask;
 }

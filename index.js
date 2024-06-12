@@ -1,3 +1,5 @@
-import { TodoList } from './components/TodoList.js'
+import { setRenderer } from './renderers/setRenderer.js'
+import { renderTodoList } from './renderers/renderTodoList.js'
 
-TodoList('root');
+setRenderer(renderTodoList)
+renderTodoList('root');

@@ -1,5 +1,3 @@
-import { TodoList } from "../components/TodoList.js";
-
 export let dataTodos = [
   {
     task: 'Learn HTML',
@@ -19,15 +17,16 @@ export let dataTodos = [
   }
 ];
 
-// функция, в которую передаем команду и данные, типа диспетчер
-// событие - добавить таску, есть данные новой таски
 export function addTodo(task) {
   dataTodos = [...dataTodos, {task: task, edit: false}];
-  TodoList('root');
+  renderAfterChange('root');
 }
-// событие - удалить таску, есть данные ИД удаляемой таски
+
 export function deleteTodo(idxToDelete) {
   dataTodos = dataTodos.filter((el, index) => index !== idxToDelete);
-  TodoList('root');
+  renderAfterChange('root');
 }
-// событие - редактировать таску
+
+export function getDataTodos() {
+  return dataTodos;
+}

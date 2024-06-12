@@ -1,15 +1,14 @@
 import { DialogNewTaskInput } from "./DialogNewTaskInput/DialogNewTaskInput.js";
 import { DialogNewTaskTitle } from "./DialogNewTaskTitle/DialogNewTaskTitle.js";
-import { dataTodos, addTodo } from '../../data/data.js'
+import { addTodo } from '../../data/data.js'
 
 export function DialogNewTask() {
   function handleChangeInput(e) {
     const value = e.target.value.trim()
-    console.log(value);
+
     if (value !== '') { // вынести в data
       addTodo(value);
       dialogNewTask.open = false;
-      console.log(dataTodos)
     }
   }
 

@@ -1,8 +1,8 @@
-import './todosContainer.css';
+import { Todos } from "../Todos/Todos.js";
 
-export function TodosContainer(children) {
+export function TodosContainer() {
   const todosContainer = document.createElement('div');
-  todosContainer.innerHTML = children;
+  todosContainer.append(Todos());
   
   return todosContainer;
 }

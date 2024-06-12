@@ -1,8 +1,14 @@
-export const todos = [
+export const dataTodos = [
   {
-    task: 'Learn HTML',
-    task: 'Learn CSS',
-    task: 'Learn JS',
-    task: 'Learn React',
+    task: 'Learn HTML'
+  },
+  {
+    task: 'Learn CSS'
+  },
+  {
+    task: 'Learn JS'
+  },
+  {
+    task: 'Learn React'
   }
-]
+];

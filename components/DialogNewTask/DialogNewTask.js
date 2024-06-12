@@ -1,10 +1,25 @@
 import { DialogNewTaskInput } from "./DialogNewTaskInput/DialogNewTaskInput.js";
 import { DialogNewTaskTitle } from "./DialogNewTaskTitle/DialogNewTaskTitle.js";
+import { dataTodos } from '../../data/data.js'
 
 export function DialogNewTask() {
+  function handleChangeInput(e) {
+    const value = e.target.value.trim()
+    console.log(value);
+    if (value !== '') { // вынести в data
+      dataTodos.push({
+        task: value,
+        edit: false
+      })
+      dialogNewTask.open = false;
+      console.log(dataTodos)
+    }
+  }
+
   const dialogNewTask = document.createElement('dialog');
   dialogNewTask.append(DialogNewTaskTitle());
-  dialogNewTask.append(DialogNewTaskInput());
+  dialogNewTask.append(DialogNewTaskInput(handleChangeInput));
+
   dialogNewTask.style = `
     position: fixed;
     /* Фиксированное позиционирование относительно вьюпорта */
